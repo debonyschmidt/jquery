@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Modify Part 2</title>
+  <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+    .color{
+
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#" id="add-class">Add Class</a>
+  <a href="#" id="remove-class">Remove Class</a>
+  <a href="#" id="toggle-class">Toggle Class</a>
+  <a href="#" id="increase-class">Increase Class</a>
+
+  <div id="container">
+    <p>1 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>2 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>3 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+
+  <script>
+      $("document").ready(function() {
+        
+        $("#add-class").click(function() {
+          $("p:first").addClass('color');
+        });
+
+        $("#remove-class").click(function() {
+          $("p:first").removeClass('color');
+        });
+
+        $("#toggle-class").click(function() {
+          $("p:first").toggleClass('color');
+        });
+
+        $("#increase-class").click(function() {
+          $("p:first").css("font-size", "+=1px");
+        });
+
+
+      });
+  </script>
+  
+</body>
+</html> 

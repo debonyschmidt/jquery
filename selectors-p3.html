@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Selector Part 3</title>
+  <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+  <p>"Lorem ipsum dolor sit amet"</p>
+  <p>"Lorem ipsum dolor sit amet"</p>
+
+  <div>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p class="fourth-para">"Lorem ipsum dolor sit amet"</p>
+  </div>
+
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+    <li><a href="">Home</a></li>
+  </ul>
+
+  <div id="box">
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p class="last">"Lorem ipsum dolor sit amet"</p>
+  </div>
+
+  <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">Home</a></li>
+    </ul>
+
+  <script>
+      $("document").ready(function() {
+  
+        //$("div > p").css("border", "2px solid blue");
+        //$("div > p.fourth-para").css("border", "2px solid blue");
+        $("#box + ul").css("border", "2px solid blue");
+
+      });
+  </script>
+  
+</body>
+</html> 

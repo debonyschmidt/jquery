@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Filter part 2</title>
+  <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"jQuery ipsum dolor sit amet"</p>
+  </div>
+
+
+  <script>
+      $("document").ready(function() {
+        
+        $("p:contains('jQuery')").css("border", "1px solid red");
+        $("p:nth-child(2)").css("border", "1px solid red");
+
+      });
+  </script>
+  
+</body>
+</html> 

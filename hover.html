@@ -5,23 +5,32 @@
   <meta name="viewport" content="width=
   , initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>jQuery Replace</title>
+  <title>jQuery Hover</title>
   <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+    .hightlight{
+      background: #ff0000;
+    }
+  </style>
 </head>
 <body>
 
   <div id="textBox">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      <p class="textCopy">Lorem Ipsum.</p>
+
+      <p>Dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 
   <script>
       $("document").ready(function() {
+       
+       $(".textCopy").hover(highlightCopy);
 
-        var newText = $("<p>");
+       function highlightCopy() {
 
-        newText.append("<i>I just replaced something</i>");
-
-        $("#textBox").html(newText);
+         $(this).toggleClass("hightlight");
+       }
+      
       });
   </script>
   

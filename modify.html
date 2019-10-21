@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Modify</title>
+  <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+    .colorBox{
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <p>1 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>2 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>3 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>4 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+
+  <script>
+      $("document").ready(function() {
+        //$("#container p").wrap("<div class='colorBox'>");
+        //$("#container p:first").wrap("<div class='colorBox'>");
+        //$("#container p:first").empty();
+        //$("<div>container</div>").replaceAll("#container");
+        $("#container").replaceWith("<div>Container 2</div>");
+
+      });
+  </script>
+  
+</body>
+</html> 

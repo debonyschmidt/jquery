@@ -5,18 +5,26 @@
   <meta name="viewport" content="width=
   , initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>jQuery</title>
+  <title>jQuery Filters</title>
   <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+  </style>
 </head>
 <body>
 
-  <h1>I love jQuery 1</h1>
-  <h1>I love jQuery 2</h1>
-  <h1>I love jQuery 3</h1>
+  <div id="container">
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <p>"Lorem ipsum dolor sit amet"</p>
+  </div>
+
 
   <script>
       $("document").ready(function() {
-        $("h1:last").css("border", "2px solid red");
+  
+        $("#container p:odd").css("background", "grey");
+        
       });
   </script>
   

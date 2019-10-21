@@ -5,23 +5,18 @@
   <meta name="viewport" content="width=
   , initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>jQuery Replace</title>
+  <title>jQuery Selector</title>
   <script src="/js/node_modules/jquery/dist/jquery.js"></script>
 </head>
 <body>
 
-  <div id="textBox">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-  </div>
+  <h1>I love jQuery 1</h1>
+  <h1>I love jQuery 2</h1>
+  <h1>I love jQuery 3</h1>
 
   <script>
       $("document").ready(function() {
-
-        var newText = $("<p>");
-
-        newText.append("<i>I just replaced something</i>");
-
-        $("#textBox").html(newText);
+        $("h1:last").css("border", "2px solid red");
       });
   </script>
   

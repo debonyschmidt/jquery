@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Create</title>
+  <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+  <a id="create" href="#">Create</a>
+  <a id="create_text" href="#">Create Text</a>
+  <a id="create_variable" href="#">Create Variable</a>
+
+  <div id="container">
+    <p>1 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>2 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>3 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <p>4 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+
+  <script>
+      $("document").ready(function() {
+        $("#create_text").click(function() {
+          $("#container p:last").text("Replace and crete this text")
+        });
+
+        $("#create_variable").click(function() {
+          var newText = $("#container p:first");
+
+          $("#container p:last").html(newText);
+        });
+      });
+  </script>
+  
+</body>
+</html> 

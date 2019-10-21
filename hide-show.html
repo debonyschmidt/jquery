@@ -5,23 +5,35 @@
   <meta name="viewport" content="width=
   , initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>jQuery Replace</title>
+  <title>jQuery Hide-Show</title>
   <script src="/js/node_modules/jquery/dist/jquery.js"></script>
+  <style>
+    #textBox{
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
+  <a href="#" id="show">Click to show</a> | <a href="#" id="hide">Click to hide</a>
+
   <div id="textBox">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      Lorem Ipsum. 
   </div>
 
   <script>
       $("document").ready(function() {
 
-        var newText = $("<p>");
+        $("#show").on("click", function() {
 
-        newText.append("<i>I just replaced something</i>");
+          $("#textBox").show();
+        })
 
-        $("#textBox").html(newText);
+        $("#hide").on("click", function() {
+
+          $("#textBox").hide();
+        })
+       
       });
   </script>
   
